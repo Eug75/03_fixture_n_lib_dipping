@@ -12,3 +12,4 @@ def test_search_nothing(browser_window_size):
     browser.open('https://duckduckgo.com')
     browser.element('[name="q"]').should(be.blank).type('kjbkjsadrfeg').press_enter()
     assert browser.element('html').should(have.text('ничего не найдено'))
+    print(" В тесте test_search_nothing ничего не найдено, так и должно быть.")
