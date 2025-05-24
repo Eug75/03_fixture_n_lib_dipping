@@ -1,5 +1,5 @@
-from selene import browser, be, have
 import pytest
+from selene import browser, be, have
 
 def test_search_task01(browser_window_size):
     browser.open('https://google.com')
