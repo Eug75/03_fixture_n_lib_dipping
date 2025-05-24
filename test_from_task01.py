@@ -2,7 +2,8 @@ from selene import browser, be, have
 import pytest
 
 def test_search_task01():
-
+    browser.config.window_width = 1200
+    browser.config.window_height = 900
     browser.open('https://google.com')
     browser.element('[name="q"]').should(be.blank).type('qa.guru').press_enter()
     assert browser.element('html').should(have.text('Об этой странице'))
